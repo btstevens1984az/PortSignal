@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PortSignal — Port Reference & Firewall Doc Builder</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <div class="logo"><div class="logo-mark">⬡</div><div><h1>PortSignal</h1><p class="sub">Port encyclopedia with risk flags and firewall rule export</p></div></div>
+  </div>
+</header>
+<main>
+  <div class="card">
+    <h2>Port reference</h2>
+    <input class="search" id="search" placeholder="Search port, service, or risk…">
+    <div style="max-height:360px;overflow-y:auto">
+      <table><thead><tr><th>Port</th><th>Proto</th><th>Service</th><th>Risk</th><th>Notes</th></tr></thead>
+      <tbody id="port-table"></tbody></table>
+    </div>
+  </div>
+  <div class="card">
+    <h2>Firewall rule builder</h2>
+    <div style="display:flex;flex-direction:column;gap:.5rem;margin-bottom:.75rem">
+      <input id="rule-name" placeholder="Rule name (e.g. Allow HTTPS from App Tier)">
+      <input id="rule-src" placeholder="Source (e.g. 10.0.10.0/24)">
+      <input id="rule-dst" placeholder="Destination (e.g. 10.0.20.50)">
+      <input id="rule-port" placeholder="Port (e.g. 443)" type="number">
+      <select id="rule-action"><option>Allow</option><option>Deny</option></select>
+    </div>
+    <button class="btn btn-primary" id="btn-add-rule">Add rule</button>
+    <ul id="rule-list" style="list-style:none;margin-top:.75rem;font-size:.82rem"></ul>
+    <button class="btn btn-primary" id="btn-export-rules" style="margin-top:.5rem">Export rules (text)</button>
+    <textarea id="rule-export" readonly style="margin-top:.75rem" placeholder="Exported rules appear here…"></textarea>
+  </div>
+</main>
+<script src="js/app.js"></script>
+</body>
+</html>
