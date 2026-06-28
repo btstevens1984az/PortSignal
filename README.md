@@ -6,12 +6,8 @@ Stop googling "what port is LDAP" during a firewall ticket. Build the rule doc o
 
 ## Screenshots
 
-| View | Preview |
-|------|---------|
-| Port reference | ![Searchable port table with risk flags](media/ports.png) |
-| Rule builder | ![Firewall rule builder form](media/firewall.png) |
-
-![Port reference](media/ports.png)
+![Searchable port table with risk flags](media/ports.png) |
+![Firewall rule builder form](media/firewall.png) |
 
 ## What it does
 
